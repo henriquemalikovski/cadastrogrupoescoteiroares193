@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pré-cadastro de novo associado · Grupo Escoteiro Arés 193/RS</title>
+  <meta name="description" content="Formulário de pré-cadastro de novos associados do Grupo Escoteiro Arés 193/RS.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1d5e34">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o formulário</a>
+
+  <header class="topo">
+    <div class="topo-interno">
+      <p class="topo-grupo">Grupo Escoteiro Arés 193/RS</p>
+      <h1>Pré-cadastro de novo associado</h1>
+    </div>
+  </header>
+
+  <main id="conteudo" class="principal" tabindex="-1">
+    <noscript>
+      <p class="aviso aviso-erro">Este formulário precisa de JavaScript ativado no navegador.</p>
+    </noscript>
+
+    <div id="carregando" class="aviso">Carregando o formulário…</div>
+
+    <div id="aviso-rascunho" class="aviso" hidden>
+      <p id="aviso-rascunho-texto"></p>
+    </div>
+
+    <nav id="progresso" class="progresso" aria-label="Etapas do cadastro" hidden>
+      <ol id="lista-etapas" class="etapas"></ol>
+      <progress id="barra-progresso" max="4" value="1" aria-hidden="true"></progress>
+    </nav>
+
+    <div id="anuncio" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+    <form id="formulario" novalidate hidden>
+      <div id="etapa"></div>
+
+      <div id="falha-envio" class="aviso aviso-erro" hidden tabindex="-1"></div>
+
+      <!-- Campo-armadilha para robôs: pessoas não veem nem preenchem. -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Deixe este campo em branco</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="navegacao">
+        <button type="button" id="botao-voltar" class="botao botao-secundario">Voltar</button>
+        <button type="submit" id="botao-avancar" class="botao botao-primario">Próximo</button>
+      </div>
+    </form>
+
+    <section id="resultado" class="resultado" hidden tabindex="-1" aria-labelledby="resultado-titulo"></section>
+
+    <p id="area-limpar" class="area-limpar" hidden>
+      <button type="button" id="botao-limpar" class="botao-link">Limpar e recomeçar</button>
+    </p>
+  </main>
+
+  <footer class="rodape">
+    <p><a href="/privacidade">Como usamos seus dados</a></p>
+    <p>Os dados são lançados manualmente pela secretaria no sistema dos Escoteiros do Brasil (Paxtu).</p>
+  </footer>
+</body>
+</html>

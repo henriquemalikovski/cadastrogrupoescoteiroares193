@@ -1,0 +1,22 @@
+{
+  "name": "pre-cadastro-escoteiro",
+  "version": "1.0.0",
+  "description": "Formulário de pré-cadastro de novos associados do Grupo Escoteiro Arés 193/RS",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "nodemailer": "^10.1.1"
+  }
+}
